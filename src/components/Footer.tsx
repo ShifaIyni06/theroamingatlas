@@ -1,0 +1,57 @@
+import { MapPin, Phone, Mail } from "lucide-react";
+
+const Footer = () => (
+  <footer id="contact" className="border-t border-foreground/5 bg-secondary/20">
+    <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="md:col-span-2">
+          <h3 className="text-2xl font-serif text-foreground mb-4">THE ROAMING ATLAS</h3>
+          <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
+            Curated travel experiences across India. We craft journeys that blend luxury, culture, and adventure into unforgettable memories.
+          </p>
+          <div className="flex gap-4 mt-6">
+            {["Instagram", "Twitter", "Facebook", "YouTube"].map((s) => (
+              <a key={s} href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+                {s}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-serif text-foreground mb-4">Quick Links</h4>
+          <div className="flex flex-col gap-2">
+            {["Home", "Destinations", "Packages", "About", "Contact"].map((l) => (
+              <a key={l} href={`#${l.toLowerCase()}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                {l}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-serif text-foreground mb-4">Contact Us</h4>
+          <div className="space-y-3">
+            <p className="text-sm text-muted-foreground flex items-center gap-2">
+              <MapPin size={14} className="text-primary" /> New Delhi, India
+            </p>
+            <p className="text-sm text-muted-foreground flex items-center gap-2">
+              <Phone size={14} className="text-primary" /> +91 98765 43210
+            </p>
+            <p className="text-sm text-muted-foreground flex items-center gap-2">
+              <Mail size={14} className="text-primary" /> hello@roamingatlas.in
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-12 pt-8 border-t border-foreground/5 text-center">
+        <p className="text-xs text-muted-foreground">
+          © {new Date().getFullYear()} The Roaming Atlas. All rights reserved. Crafted with ❤️ for wanderers.
+        </p>
+      </div>
+    </div>
+  </footer>
+);
+
+export default Footer;
