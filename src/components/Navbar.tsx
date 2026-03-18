@@ -1,0 +1,75 @@
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const NAV_LINKS = ["Home", "Destinations", "Packages", "About", "Contact"];
+
+interface NavbarProps {
+  onBookNow: () => void;
+}
+
+const Navbar = ({ onBookNow }: NavbarProps) => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 w-full z-50 border-b border-foreground/5 backdrop-blur-md bg-background/20">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="#" className="text-2xl font-serif tracking-tighter text-foreground">
+          THE ROAMING ATLAS
+        </a>
+
+        <div className="hidden md:flex gap-8 text-sm font-medium text-muted-foreground">
+          {NAV_LINKS.map((item) => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="hover:text-foreground transition-colors duration-300"
+            >
+              {item}
+            </a>
+          ))}
+        </div>
+
+        <button onClick={onBookNow} className="hidden md:block btn-primary text-sm">
+          Book Now
+        </button>
+
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="md:hidden p-2 text-foreground"
+        >
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-foreground/5"
+          >
+            <div className="px-6 py-6 flex flex-col gap-4">
+              {NAV_LINKS.map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item}
+                </a>
+              ))}
+              <button onClick={() => { onBookNow(); setMobileOpen(false); }} className="btn-primary text-sm mt-2">
+                Book Now
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+};
+
+export default Navbar;
