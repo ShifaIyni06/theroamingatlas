@@ -12,7 +12,9 @@ const Navbar = ({ onBookNow }: NavbarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isLight, setIsLight] = useState(() => {
     if (typeof window !== "undefined") {
-      return document.documentElement.classList.contains("light");
+      const saved = localStorage.getItem("theme");
+      if (saved) return saved === "light";
+      return false;
     }
     return false;
   });
