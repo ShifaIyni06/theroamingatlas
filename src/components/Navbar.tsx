@@ -10,6 +10,21 @@ interface NavbarProps {
 
 const Navbar = ({ onBookNow }: NavbarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isLight, setIsLight] = useState(() => {
+    if (typeof window !== "undefined") {
+      return document.documentElement.classList.contains("light");
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (isLight) {
+      document.documentElement.classList.add("light");
+    } else {
+      document.documentElement.classList.remove("light");
+    }
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+  }, [isLight]);
 
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-foreground/5 backdrop-blur-md bg-background/20">
