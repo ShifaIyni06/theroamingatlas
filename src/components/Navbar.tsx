@@ -58,12 +58,21 @@ const Navbar = ({ onBookNow }: NavbarProps) => {
           </button>
         </div>
 
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 text-foreground"
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={() => setIsLight(!isLight)}
+            className="p-2 rounded-full bg-foreground/10 border border-foreground/10 text-foreground transition-colors"
+            aria-label="Toggle theme"
+          >
+            {isLight ? <Moon size={18} /> : <Sun size={18} />}
+          </button>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="p-2 text-foreground"
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
