@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = ["Home", "Destinations", "Packages", "About", "Contact"];
@@ -10,6 +10,23 @@ interface NavbarProps {
 
 const Navbar = ({ onBookNow }: NavbarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isLight, setIsLight] = useState(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("theme");
+      if (saved) return saved === "light";
+      return false;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (isLight) {
+      document.documentElement.classList.add("light");
+    } else {
+      document.documentElement.classList.remove("light");
+    }
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+  }, [isLight]);
 
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-foreground/5 backdrop-blur-md bg-background/20">
@@ -30,16 +47,34 @@ const Navbar = ({ onBookNow }: NavbarProps) => {
           ))}
         </div>
 
-        <button onClick={onBookNow} className="hidden md:block btn-primary text-sm">
-          Book Now
-        </button>
+        <div className="hidden md:flex items-center gap-3">
+          <button
+            onClick={() => setIsLight(!isLight)}
+            className="p-2.5 rounded-full bg-foreground/10 border border-foreground/10 text-foreground hover:bg-foreground/20 transition-colors duration-300"
+            aria-label="Toggle theme"
+          >
+            {isLight ? <Moon size={18} /> : <Sun size={18} />}
+          </button>
+          <button onClick={onBookNow} className="btn-primary text-sm">
+            Book Now
+          </button>
+        </div>
 
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 text-foreground"
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={() => setIsLight(!isLight)}
+            className="p-2 rounded-full bg-foreground/10 border border-foreground/10 text-foreground transition-colors"
+            aria-label="Toggle theme"
+          >
+            {isLight ? <Moon size={18} /> : <Sun size={18} />}
+          </button>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="p-2 text-foreground"
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
