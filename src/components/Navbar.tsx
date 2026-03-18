@@ -45,9 +45,18 @@ const Navbar = ({ onBookNow }: NavbarProps) => {
           ))}
         </div>
 
-        <button onClick={onBookNow} className="hidden md:block btn-primary text-sm">
-          Book Now
-        </button>
+        <div className="hidden md:flex items-center gap-3">
+          <button
+            onClick={() => setIsLight(!isLight)}
+            className="p-2.5 rounded-full bg-foreground/10 border border-foreground/10 text-foreground hover:bg-foreground/20 transition-colors duration-300"
+            aria-label="Toggle theme"
+          >
+            {isLight ? <Moon size={18} /> : <Sun size={18} />}
+          </button>
+          <button onClick={onBookNow} className="btn-primary text-sm">
+            Book Now
+          </button>
+        </div>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
