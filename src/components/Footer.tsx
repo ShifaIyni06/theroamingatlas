@@ -33,13 +33,13 @@ const Footer = () => (
           <h4 className="font-serif text-foreground mb-4">Contact Us</h4>
           <div className="space-y-3">
             <p className="text-sm text-muted-foreground flex items-center gap-2">
-              <MapPin size={14} className="text-primary" /> New Delhi, India
+              <MapPin size={14} className="text-primary" /> Hyderabad, India
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-2">
-              <Phone size={14} className="text-primary" /> +91 98765 43210
+              <Phone size={14} className="text-primary" /> +91 99084 32414
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-2">
-              <Mail size={14} className="text-primary" /> hello@roamingatlas.in
+              <Mail size={14} className="text-primary" /> theroamingatlas.com
             </p>
           </div>
         </div>
