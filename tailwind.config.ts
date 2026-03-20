@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         serif: ["Fraunces", "serif"],
         cursive: ["Pinyon Script", "cursive"],
+        price: ["Inter", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
