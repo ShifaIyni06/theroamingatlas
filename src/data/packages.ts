@@ -10,6 +10,13 @@ import backwaters from "@/assets/dest-backwaters.jpg";
 
 export type ThemeType = "nature" | "mountain" | "heritage";
 
+export interface ItineraryDay {
+  day: number;
+  title: string;
+  description: string;
+  icon: string;
+}
+
 export interface TravelPackage {
   id: string;
   title: string;
@@ -17,7 +24,9 @@ export interface TravelPackage {
   theme: ThemeType;
   image: string;
   description: string;
+  duration: string;
   highlights: string[];
+  itinerary: ItineraryDay[];
   prices: { train: number; flight: number };
   inclusions: string[];
   exclusions: string[];
