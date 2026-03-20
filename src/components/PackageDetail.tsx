@@ -180,7 +180,7 @@ const PackageDetail = ({ pkg, onClose, onBook }: PackageDetailProps) => (
           {/* Book CTA */}
           <div className="pt-2">
             <button onClick={() => onBook(pkg)} className="btn-primary w-full text-lg py-4">
-              Book This Package — Starting ₹{pkg.prices.train.toLocaleString("en-IN")}
+              Book This Package — Starting <span className="font-price">₹{pkg.prices.train.toLocaleString("en-IN")}*</span>
             </button>
           </div>
         </div>
