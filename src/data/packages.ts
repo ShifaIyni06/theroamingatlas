@@ -14,7 +14,6 @@ export interface ItineraryDay {
   day: number;
   title: string;
   description: string;
-  icon: string;
 }
 
 export interface TravelPackage {
@@ -40,6 +39,7 @@ export const PACKAGES: TravelPackage[] = [
     theme: "nature",
     image: greenValleys,
     description: "Coorg & Kodaikanal — lush plantations, misty waterfalls, and serene hill stations.",
+    duration: "5 Nights / 6 Days",
     highlights: [
       "🐘 Dubare Elephant Camp Experience",
       "🌄 Raja's Seat Scenic Viewpoint",
@@ -48,6 +48,14 @@ export const PACKAGES: TravelPackage[] = [
       "🚣 Kodaikanal Lake Boating",
       "🌲 Coaker's Walk & Pillar Rocks",
       "🏯 Madikeri Fort Heritage Visit",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrival in Coorg", description: "Arrive in Madikeri, check into hotel. Evening visit to Raja's Seat for a stunning sunset over the valleys." },
+      { day: 2, title: "Coorg Exploration", description: "Visit Dubare Elephant Camp, Abbey Falls, and enjoy a guided coffee plantation tour with tasting." },
+      { day: 3, title: "Madikeri Heritage & Transfer", description: "Explore Madikeri Fort & Omkareshwara Temple. Afternoon transfer to Kodaikanal via scenic route." },
+      { day: 4, title: "Kodaikanal Highlights", description: "Kodaikanal Lake boating, Coaker's Walk, Pillar Rocks, and Green Valley viewpoint." },
+      { day: 5, title: "Nature & Bonfire Night", description: "Visit Bear Shola Falls, Pine Forest, and Guna Caves. Evening DJ Night & Bonfire." },
+      { day: 6, title: "Departure", description: "Breakfast and checkout. Transfer to railway station/airport with beautiful memories." },
     ],
     prices: { train: 25500, flight: 42500 },
     inclusions: [
@@ -73,6 +81,7 @@ export const PACKAGES: TravelPackage[] = [
     theme: "nature",
     image: wildTrails,
     description: "Nainital & Jim Corbett — scenic hills, sacred temples, and jungle safaris.",
+    duration: "5 Nights / 6 Days",
     highlights: [
       "⛰️ Scenic Hill Drive to Nainital",
       "🛕 Darshan at Naina Devi Temple",
@@ -81,6 +90,14 @@ export const PACKAGES: TravelPackage[] = [
       "🐅 Jim Corbett National Park Jeep Safari",
       "🛕 Visit to Garjia Temple",
       "🏛️ Corbett Museum Visit",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrival in Nainital", description: "Arrive in Nainital, check into hotel. Evening Mall Road walk and Naini Lake stroll." },
+      { day: 2, title: "Nainital Sightseeing", description: "Visit Naina Devi Temple, Tiffin Top trek, Snow View Point, and Botanical Garden." },
+      { day: 3, title: "Lakes & Caves", description: "Explore Cave Garden, Bhimtal Lake, and Sattal. Evening bonfire with group activities." },
+      { day: 4, title: "Transfer to Jim Corbett", description: "Scenic drive to Jim Corbett. Visit Garjia Temple, Corbett Museum, and riverside walk." },
+      { day: 5, title: "Jungle Safari", description: "Early morning Jeep Safari in Corbett National Park. Afternoon nature walk and DJ Night." },
+      { day: 6, title: "Departure", description: "Breakfast and farewell. Transfer to station/airport with unforgettable jungle memories." },
     ],
     prices: { train: 27500, flight: 42500 },
     inclusions: [
@@ -106,6 +123,7 @@ export const PACKAGES: TravelPackage[] = [
     theme: "heritage",
     image: goldenGlory,
     description: "Amritsar & Dharamshala — spiritual sanctuaries and Himalayan hill escapes.",
+    duration: "5 Nights / 6 Days",
     highlights: [
       "🛕 Golden Temple Spiritual Visit",
       "🌿 Jallianwala Bagh Heritage Site",
@@ -114,6 +132,14 @@ export const PACKAGES: TravelPackage[] = [
       "🌄 Scenic Drive to Dharamshala",
       "🍵 Tea Plantation Visit in the Hills",
       "☸️ Dalai Lama Temple",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrival in Amritsar", description: "Arrive in Amritsar, hotel check-in. Evening visit to the illuminated Golden Temple." },
+      { day: 2, title: "Amritsar Heritage", description: "Visit Jallianwala Bagh, Partition Museum, and the thrilling Wagah Border ceremony." },
+      { day: 3, title: "Transfer to Dharamshala", description: "Scenic drive to Dharamshala. Visit Dalai Lama Temple and Namgyal Monastery." },
+      { day: 4, title: "McLeod Ganj & Triund", description: "Explore McLeod Ganj market, Bhagsu Waterfall, and short Triund base trek." },
+      { day: 5, title: "Tea Gardens & Culture", description: "Visit Kangra tea plantations, Kangra Fort, and Masroor Rock Cut Temples. Evening bonfire." },
+      { day: 6, title: "Departure", description: "Breakfast and checkout. Depart with spiritual and cultural memories." },
     ],
     prices: { train: 27500, flight: 42500 },
     inclusions: [
@@ -139,6 +165,7 @@ export const PACKAGES: TravelPackage[] = [
     theme: "mountain",
     image: himalayanHarmony,
     description: "Shimla & Khajjiar — snow peaks, colonial architecture, and the Mini Switzerland of India.",
+    duration: "5 Nights / 6 Days",
     highlights: [
       "⛰️ Scenic Hill Drives in Himachal",
       "🌲 Visit to Mini Switzerland – Khajjiar",
@@ -147,6 +174,14 @@ export const PACKAGES: TravelPackage[] = [
       "🛕 Jakhu Temple (Shimla Highest Point)",
       "🏛️ Rashtrapati Niwas Shimla",
       "⛪ Christ Church & Mall Road Shopping",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrival in Shimla", description: "Arrive in Shimla, hotel check-in. Evening stroll on Mall Road and The Ridge." },
+      { day: 2, title: "Shimla Sightseeing", description: "Visit Jakhu Temple, Christ Church, Rashtrapati Niwas, and Kufri Snow Point." },
+      { day: 3, title: "Transfer to Dalhousie", description: "Scenic drive to Dalhousie via Barog. Explore Khajjiar – the Mini Switzerland of India." },
+      { day: 4, title: "Dalhousie Exploration", description: "Dainkund Peak trek, Kalatop Wildlife Sanctuary walk, and Chamba town heritage visit." },
+      { day: 5, title: "Nature & Farewell Night", description: "Visit Satdhara Falls, Panchpula, and local market. Farewell DJ Night & Bonfire." },
+      { day: 6, title: "Departure", description: "Breakfast and checkout. Transfer to station/airport. Journey ends with mountain memories." },
     ],
     prices: { train: 27500, flight: 42500 },
     inclusions: [
@@ -172,6 +207,7 @@ export const PACKAGES: TravelPackage[] = [
     theme: "nature",
     image: mysticMeghalaya,
     description: "Shillong & Cherrapunji — living root bridges, crystal rivers, and dramatic waterfalls.",
+    duration: "6 Nights / 7 Days",
     highlights: [
       "🌊 Nohkalikai Falls Scenic View",
       "🪨 Mawsmai Cave Exploration",
@@ -180,6 +216,15 @@ export const PACKAGES: TravelPackage[] = [
       "🏞️ Ward's Lake & Lady Hydari Park",
       "🏛️ Don Bosco Museum Cultural Visit",
       "🌄 Seven Sisters Falls Viewpoint",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrival in Guwahati", description: "Arrive in Guwahati. Visit Kamakhya Temple. Transfer to Shillong, hotel check-in." },
+      { day: 2, title: "Shillong City Tour", description: "Explore Ward's Lake, Lady Hydari Park, Don Bosco Museum, and Police Bazaar." },
+      { day: 3, title: "Cherrapunji Day Trip", description: "Visit Nohkalikai Falls, Mawsmai Cave, Seven Sisters Falls, and Eco Park." },
+      { day: 4, title: "Living Root Bridge", description: "Trek to Double Decker Living Root Bridge. Explore Nongriat village and rainbow falls." },
+      { day: 5, title: "Dawki & Mawlynnong", description: "Crystal clear Umngot River boating in Dawki. Visit Asia's cleanest village – Mawlynnong." },
+      { day: 6, title: "Shillong Leisure & Night", description: "Visit Elephant Falls, Shillong Peak. Farewell bonfire and DJ night." },
+      { day: 7, title: "Departure", description: "Breakfast, checkout, and transfer to Guwahati airport/station." },
     ],
     prices: { train: 32500, flight: 42500 },
     inclusions: [
@@ -205,6 +250,7 @@ export const PACKAGES: TravelPackage[] = [
     theme: "mountain",
     image: mountainMagic,
     description: "Manali & Kullu — snowy passes, hot springs, and Himalayan adventure.",
+    duration: "5 Nights / 6 Days",
     highlights: [
       "⛰️ Scenic Himalayan Drive to Manali",
       "🛕 Hadimba Temple Visit",
@@ -213,6 +259,14 @@ export const PACKAGES: TravelPackage[] = [
       "♨️ Manikaran Hot Springs Visit",
       "🧣 Kullu Shawl Factory Tour",
       "🔥 Bonfire Evening & DJ Night",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrival in Manali", description: "Arrive in Manali via Volvo/Flight. Hotel check-in. Evening stroll on Mall Road." },
+      { day: 2, title: "Manali Sightseeing", description: "Visit Hadimba Temple, Vashisht Temple hot springs, Club House, and Tibetan Monastery." },
+      { day: 3, title: "Rohtang Pass Excursion", description: "Full day Rohtang Pass/Atal Tunnel adventure with snow activities and mountain views." },
+      { day: 4, title: "Kullu Valley Tour", description: "Kullu Shawl Factory tour, Manikaran Gurudwara & hot springs, riverside picnic." },
+      { day: 5, title: "Solang Valley & Farewell", description: "Solang Valley adventure activities – paragliding, zorbing. Farewell bonfire & DJ Night." },
+      { day: 6, title: "Departure", description: "Breakfast and departure. Overnight Volvo or airport transfer." },
     ],
     prices: { train: 27500, flight: 42500 },
     inclusions: [
@@ -238,6 +292,7 @@ export const PACKAGES: TravelPackage[] = [
     theme: "heritage",
     image: goldenSands,
     description: "Rajasthan — majestic forts, golden sand dunes, and royal desert culture.",
+    duration: "5 Nights / 6 Days",
     highlights: [
       "🏰 Majestic Mehrangarh Fort",
       "👑 Umaid Bhawan Palace",
@@ -246,6 +301,14 @@ export const PACKAGES: TravelPackage[] = [
       "🏜️ Sam Sand Dunes Sunset Experience",
       "🐫 Camel Ride & Cultural Folk Dance",
       "🏕️ Desert Camp Stay",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrival in Jodhpur", description: "Arrive in Jodhpur, the Blue City. Check-in and explore the vibrant local markets." },
+      { day: 2, title: "Jodhpur Heritage", description: "Visit Mehrangarh Fort, Umaid Bhawan Palace, Jaswant Thada, and Clock Tower market." },
+      { day: 3, title: "Transfer to Jaisalmer", description: "Scenic desert drive to Jaisalmer. Visit Jaisalmer Fort and Patwon Ki Haveli." },
+      { day: 4, title: "Desert Experience", description: "Sam Sand Dunes sunset, camel ride, cultural folk dance, and overnight desert camp." },
+      { day: 5, title: "Jaisalmer & Farewell", description: "Visit Gadisar Lake, Bada Bagh, and Kuldhara Ghost Village. Farewell dinner." },
+      { day: 6, title: "Departure", description: "Breakfast and departure with royal desert memories." },
     ],
     prices: { train: 28500, flight: 42500 },
     inclusions: [
@@ -271,6 +334,7 @@ export const PACKAGES: TravelPackage[] = [
     theme: "heritage",
     image: royalLegacy,
     description: "Jhansi, Orchha & Khajuraho — ancient temples, jungle safaris, and warrior heritage.",
+    duration: "5 Nights / 6 Days",
     highlights: [
       "⚔️ Jhansi Fort – Rani Lakshmibai Legacy",
       "🏰 Orchha Fort Complex",
@@ -279,6 +343,14 @@ export const PACKAGES: TravelPackage[] = [
       "🎭 Light & Sound Show at Khajuraho",
       "🐯 Bandhavgarh National Park Jungle Safari",
       "🌊 Betwa River & Orchha Chhatris",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrival in Jhansi", description: "Arrive in Jhansi. Visit Jhansi Fort and Rani Mahal. Transfer to Orchha." },
+      { day: 2, title: "Orchha Heritage", description: "Explore Orchha Fort Complex, Ram Raja Temple, Chaturbhuj Temple, and Betwa River." },
+      { day: 3, title: "Transfer to Khajuraho", description: "Drive to Khajuraho. Visit Western Group of Temples (UNESCO). Evening light & sound show." },
+      { day: 4, title: "Khajuraho & Transfer", description: "Eastern & Southern temple groups. Afternoon transfer to Bandhavgarh region." },
+      { day: 5, title: "Jungle Safari", description: "Early morning & afternoon Jeep Safari in Bandhavgarh National Park. Farewell bonfire." },
+      { day: 6, title: "Departure", description: "Breakfast and departure with warrior heritage and wildlife memories." },
     ],
     prices: { train: 27500, flight: 42500 },
     inclusions: [
@@ -304,6 +376,7 @@ export const PACKAGES: TravelPackage[] = [
     theme: "nature",
     image: backwaters,
     description: "Kerala — houseboat cruises, tea gardens, and tropical wildlife in God's Own Country.",
+    duration: "6 Nights / 7 Days",
     highlights: [
       "🎣 Fort Kochi Heritage Walk & Chinese Fishing Nets",
       "🌄 Marine Drive Evening Group Walk",
@@ -312,6 +385,15 @@ export const PACKAGES: TravelPackage[] = [
       "🚣 Mattupetty Dam Boating",
       "🦌 Eravikulam National Park Wildlife Visit",
       "🛶 Alleppey Backwater Houseboat Cruise",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrival in Kochi", description: "Arrive in Kochi. Fort Kochi heritage walk, Chinese Fishing Nets, and Marine Drive." },
+      { day: 2, title: "Transfer to Munnar", description: "Scenic drive to Munnar via Cheeyappara & Valara Waterfalls. Check-in and evening tea." },
+      { day: 3, title: "Munnar Sightseeing", description: "Visit Tea Museum, tea gardens, Eravikulam National Park, and Mattupetty Dam boating." },
+      { day: 4, title: "Munnar Nature Day", description: "Top Station viewpoint, Kundala Lake, Echo Point, and flower garden. Bonfire night." },
+      { day: 5, title: "Transfer to Alleppey", description: "Drive to Alleppey. Board traditional houseboat for backwater cruise through canals." },
+      { day: 6, title: "Alleppey & Kochi", description: "Alleppey beach morning. Transfer back to Kochi for farewell dinner and shopping." },
+      { day: 7, title: "Departure", description: "Breakfast and departure from Kochi. God's Own Country memories forever." },
     ],
     prices: { train: 27500, flight: 42500 },
     inclusions: [
