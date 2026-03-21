@@ -11,9 +11,20 @@ const Footer = () => (
           </p>
           <div className="flex gap-4 mt-6">
             {["Instagram","Facebook"].map((s) => (
-              <a key={s} href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors">
-                {s}
-              </a>
+              <a    href="https://instagram.com/theroamingatlas.official_" 
+  target="_blank" 
+  className="text-xs text-muted-foreground hover:text-primary transition-colors"
+>
+  Instagram
+     </a>
+
+<a 
+  href="https://facebook.com/" 
+  target="_blank"
+  className="text-xs text-muted-foreground hover:text-primary transition-colors"
+>
+  Facebook
+</a>
             ))}
           </div>
         </div>
