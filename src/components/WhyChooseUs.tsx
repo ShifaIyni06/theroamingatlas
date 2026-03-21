@@ -17,7 +17,7 @@ const WhyChooseUs = () => (
       transition={{ duration: 0.6, ease: [0.2, 0, 0, 1] }}
       className="text-center mb-16"
     >
-      <p className="font-cursive text-2xl text-primary mb-2">Why travel with us</p>
+      <p className="font-sans italic text-2xl md:text-3xl text-primary mb-6">Why travel with us</p>
       <h2 className="text-4xl md:text-5xl font-serif text-foreground">Built for Unforgettable Journeys</h2>
     </motion.div>
 
