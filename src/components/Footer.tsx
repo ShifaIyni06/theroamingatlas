@@ -1,5 +1,10 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 
+const socialLinks = [
+  { name: "Instagram", link: "https://instagram.com/theroamingatlas.official_" },
+  { name: "Facebook", link: "https://facebook.com/" }
+];
+
 const Footer = () => (
   <footer id="contact" className="border-t border-foreground/5 bg-secondary/20">
     <div className="max-w-7xl mx-auto px-6 py-16">
@@ -10,23 +15,17 @@ const Footer = () => (
             Curated travel experiences across India. We craft journeys that blend luxury, culture, and adventure into unforgettable memories.
           </p>
           <div className="flex gap-4 mt-6">
-            {["Instagram","Facebook"].map((s) => (
-              <a    href="https://instagram.com/theroamingatlas.official_" 
-  target="_blank" 
-  className="text-xs text-muted-foreground hover:text-primary transition-colors"
->
-  Instagram
-     </a>
-
-<a 
-  href="https://facebook.com/" 
-  target="_blank"
-  className="text-xs text-muted-foreground hover:text-primary transition-colors"
->
-  Facebook
-</a>
-            ))}
-          </div>
+  {socialLinks.map((s) => (
+    <a 
+      key={s.name}
+      href={s.link}
+      target="_blank"
+      className="text-xs text-muted-foreground hover:text-primary transition-colors"
+    >
+      {s.name}
+    </a>
+  ))}
+</div>
         </div>
 
         <div>
