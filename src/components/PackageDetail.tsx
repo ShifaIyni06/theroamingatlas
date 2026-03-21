@@ -81,7 +81,7 @@ const PackageDetail = ({ pkg, onClose, onBook }: PackageDetailProps) => (
                 <Train className="text-primary" size={22} />
               </div>
               <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">By Train</p>
-              <p className="text-3xl md:text-4xl font-serif text-foreground">₹{pkg.prices.train.toLocaleString("en-IN")}</p>
+              <p className="text-3xl md:text-4xl font-serif text-foreground">₹{pkg.prices.train.toLocaleString("en-IN")}*</p>
               <p className="text-xs text-muted-foreground mt-1">per person</p>
             </div>
             <div className="glass-card p-6 text-center group hover:scale-[1.02] transition-transform">
