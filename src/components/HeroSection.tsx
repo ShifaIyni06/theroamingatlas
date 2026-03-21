@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.png"; 
 
 interface HeroSectionProps {
   onExplore: () => void;
@@ -18,6 +19,11 @@ const HeroSection = ({ onExplore }: HeroSectionProps) => (
     <div className="absolute inset-0 gradient-overlay" />
 
     <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <img 
+    src={logo} 
+    alt="Roaming Atlas Logo" 
+    className="h-16 mx-auto mb-6"
+  />
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
