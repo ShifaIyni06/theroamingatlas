@@ -43,10 +43,12 @@ const Footer = () => (
         <div>
           <h4 className="font-serif text-foreground mb-4">Contact Us</h4>
           <div className="space-y-3">
-              <p className="text-sm text-muted-foreground flex items-center gap-2">
-       <MapPin size={16} className="text-primary" />
+              <p className="text-sm text-muted-foreground flex items-start gap-2">
+  <MapPin size={16} className="text-primary mt-1 shrink-0" />
+  <span>
     1st Floor, Neelkanth Bhavan, 1-19-72/50, Hi-Tension Rd, near TVS Workshop, Kapra, Hyderabad, Telangana - 500062
-  </p>
+  </span>
+</p>
 
   <a href="tel:+919121014210" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300">
     <Phone size={14} className="text-primary" />
