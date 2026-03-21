@@ -45,8 +45,8 @@ const DestinationCard = ({ pkg, onSelect, index }: DestinationCardProps) => {
         <div className="mt-5 flex justify-between items-end">
           <div>
             <p className="text-muted-foreground text-xs uppercase tracking-wider">Starting from</p>
-            <p className="text-2xl font-mono text-foreground tabular-nums">
-              ₹{pkg.prices.train.toLocaleString("en-IN")}
+            <p className="text-2xl font-price text-foreground tabular-nums">
+              ₹{pkg.prices.train.toLocaleString("en-IN")}*
             </p>
           </div>
           <span className="px-5 py-2 bg-foreground/10 hover:bg-foreground hover:text-background border border-foreground/20 rounded-full text-sm font-medium transition-all duration-300">
