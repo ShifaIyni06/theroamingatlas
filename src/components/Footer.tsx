@@ -48,12 +48,12 @@ const Footer = () => (
     1st Floor, Neelkanth Bhavan, 1-19-72/50, Hi-Tension Rd, near TVS Workshop, Kapra, Hyderabad, Telangana - 500062
   </p>
 
-  <a href="tel:+919121014210" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary">
+  <a href="tel:+919121014210" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300">
     <Phone size={14} className="text-primary" />
     +91 91210 14210
   </a>
 
-  <a href="mailto:roamingatlas@zohomail.in" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary">
+  <a href="mailto:roamingatlas@zohomail.in" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300">
     <Mail size={14} className="text-primary" />
     roamingatlas@zohomail.in
   </a>
