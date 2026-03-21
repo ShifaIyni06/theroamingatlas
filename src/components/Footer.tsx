@@ -32,16 +32,22 @@ const Footer = () => (
         <div>
           <h4 className="font-serif text-foreground mb-4">Contact Us</h4>
           <div className="space-y-3">
-            <p className="text-sm text-muted-foreground flex items-center gap-2">
-              <Map pin size={14} className="text-primary" /> 1st Floor, Neelkanth Bhavan, 1-19-72/50, Hi-Tension Rd, near TVS Workshop, Kapra, Hyderabad, Telangana - 500062
-            </p>
-            <p className="text-sm text-muted-foreground flex items-center gap-2">
-              <Phone size={14} className="text-primary" /> +91 91210 14210
-            </p>
-            <p className="text-sm text-muted-foreground flex items-center gap-2">
-              <Mail size={14}className="text-primary" /> roamingatlas@zohomail.in
-            </p>
-          </div>
+              <p className="text-sm text-muted-foreground flex items-center gap-2">
+       <MapPin size={14} className="text-primary" />
+    1st Floor, Neelkanth Bhavan, 1-19-72/50, Hi-Tension Rd, near TVS Workshop, Kapra, Hyderabad, Telangana - 500062
+  </p>
+
+  <a href="tel:+919121014210" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary">
+    <Phone size={14} className="text-primary" />
+    +91 91210 14210
+  </a>
+
+  <a href="mailto:roamingatlas@zohomail.in" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary">
+    <Mail size={14} className="text-primary" />
+    roamingatlas@zohomail.in
+  </a>
+
+</div>
         </div>
       </div>
 
