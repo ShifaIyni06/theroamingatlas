@@ -16,7 +16,7 @@ const Testimonials = () => (
       transition={{ duration: 0.6, ease: [0.2, 0, 0, 1] }}
       className="text-center mb-16"
     >
-      <p className="font-cursive text-2xl text-primary mb-2">Traveler Stories</p>
+      <p className="font-sans text-2xl md:text-3xl text-primary mb-6">Traveler Stories</p>
       <h2 className="text-4xl md:text-5xl font-serif text-foreground">Voices from the Road</h2>
     </motion.div>
 
