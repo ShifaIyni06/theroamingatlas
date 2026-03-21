@@ -17,13 +17,14 @@ const Footer = () => (
           <div className="flex gap-4 mt-6">
   {socialLinks.map((s) => (
     <a 
-      key={s.name}
-      href={s.link}
-      target="_blank"
-      className="text-xs text-muted-foreground hover:text-primary transition-colors"
-    >
-      {s.name}
-    </a>
+  key={s.name}
+  href={s.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-xs text-muted-foreground hover:text-primary transition-colors"
+>
+  {s.name}
+</a>
   ))}
 </div>
         </div>
