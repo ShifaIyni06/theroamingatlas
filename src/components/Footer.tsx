@@ -33,13 +33,13 @@ const Footer = () => (
           <h4 className="font-serif text-foreground mb-4">Contact Us</h4>
           <div className="space-y-3">
             <p className="text-sm text-muted-foreground flex items-center gap-2">
-              <className="text-primary" /> 📍 1st Floor, Neelkanth Bhavan, 1-19-72/50, Hi-Tension Rd, near TVS Workshop, Kapra, Hyderabad, Telangana - 500062
+              <Map pin size={14} className="text-primary" /> 1st Floor, Neelkanth Bhavan, 1-19-72/50, Hi-Tension Rd, near TVS Workshop, Kapra, Hyderabad, Telangana - 500062
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-2">
-              <className="text-primary" /> 📞 +91 91210 14210
+              <Phone size={14} className="text-primary" /> +91 91210 14210
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-2">
-              <className="text-primary" /> 📧 roamingatlas@zohomail.in
+              <Mail size={14}className="text-primary" /> roamingatlas@zohomail.in
             </p>
           </div>
         </div>
