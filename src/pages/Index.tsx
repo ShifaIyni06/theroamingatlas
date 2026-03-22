@@ -44,7 +44,7 @@ const Index = () => {
           transition={{ duration: 0.6, ease: [0.2, 0, 0, 1] }}
           className="mb-16"
         >
-          <p className="font-cursive text-2xl text-primary mb-2">Where to next</p>
+          <p className="font-sans italic text-2xl md:text-3xl text-primary mb-6">Where to next</p>
           <h2 className="text-4xl md:text-5xl font-serif">Featured Destinations</h2>
           <p className="text-muted-foreground mt-4 max-w-lg">
             Hand-picked destinations where luxury meets the raw beauty of the Indian subcontinent.
@@ -66,7 +66,7 @@ const Index = () => {
           transition={{ duration: 0.6, ease: [0.2, 0, 0, 1] }}
           className="mb-16"
         >
-          <p className="font-cursive text-2xl text-primary mb-2">All experiences</p>
+          <p className="font-sans italic text-2xl md:text-3xl text-primary mb-6">All experiences</p>
           <h2 className="text-4xl md:text-5xl font-serif">Our Curated Packages</h2>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
