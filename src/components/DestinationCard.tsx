@@ -40,7 +40,7 @@ const DestinationCard = ({ pkg, onSelect, index }: DestinationCardProps) => {
           {pkg.theme}
         </span>
         <h3 className="text-2xl md:text-3xl font-serif text-foreground mt-2">{pkg.title}</h3>
-        <p className="font-sans italic text-2xl md:text-3xl text-primary mb-6">& {pkg.subtitle}</p>
+        <p className="font-sans italic text-lg md:text-xl text-primary/80 mb-3">& {pkg.subtitle}</p>
         <p className="text-muted-foreground text-sm mt-2 line-clamp-2">{pkg.description}</p>
         <div className="mt-5 flex justify-between items-end">
           <div>
