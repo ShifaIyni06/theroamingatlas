@@ -66,7 +66,7 @@ const PackageDetail = ({ pkg, onClose, onBook }: PackageDetailProps) => (
               </span>
             </div>
             <h2 className="text-3xl md:text-5xl font-serif text-foreground leading-tight">{pkg.title}</h2>
-            <p className="font-sans italic text-lg md:text-xl text-primary/80 tracking-wide mt-1">& {pkg.subtitle}</p>
+            <p className="font-sans italic text-2xl md:text-3xl text-primary mb-6">& {pkg.subtitle}</p>
           </div>
         </div>
 
