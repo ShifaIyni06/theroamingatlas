@@ -414,4 +414,4 @@ export const PACKAGES: TravelPackage[] = [
   },
 ];
 
-export const FEATURED_IDS = ["green-valleys", "wild-trails", "golden-glory", "himalayan-harmony"];
+export const FEATURED_IDS = ["mystic-meghalaya", "wild-trails", "mountain-magic", "himalayan-harmony"];
