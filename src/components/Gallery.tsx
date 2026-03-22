@@ -1,0 +1,1 @@
+hdjxnc   cvnc,smxm,cm
