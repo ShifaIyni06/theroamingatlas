@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Gallery from "@/components/Gallery";
 
 const NAV_LINKS = ["Home", "Destinations", "Packages", "Gallery", "About", "Contact"];
 
