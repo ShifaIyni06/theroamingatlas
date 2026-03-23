@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import Gallery from "@/components/Gallery";
 import HeroSection from "@/components/HeroSection";
 import DestinationCard from "@/components/DestinationCard";
 import PackageDetail from "@/components/PackageDetail";
