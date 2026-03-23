@@ -32,17 +32,17 @@ const Navbar = ({ onBookNow }: NavbarProps) => {
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-foreground/5 backdrop-blur-md bg-background/20">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3 group">
+        <a href="#" className="flex items-center gap-3">
   <img
-    src="/LOGO.png"
-    alt="Roaming Atlas Logo"
-    className="w-9 h-9 object-contain transition-transform duration-300 group-hover:scale-110"
+    src="/logo.png"
+    alt="logo"
+    className="w-12 h-12 object-contain"
   />
 
-  <div className="flex flex-col leading-tight">
-    <span className="text-2xl font-serif tracking-tight text-foreground">
-      THE ROAMING ATLAS
-    </span>
+  <span className="text-lg md:text-xl font-semibold tracking-wide text-foreground">
+    THE ROAMING ATLAS
+  </span>
+</a>
     <span className="text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
       Explore • Experience • Escape
     </span>
