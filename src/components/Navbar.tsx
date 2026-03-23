@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const NAV_LINKS = ["Home", "Destinations", "Packages", "About", "Contact"];
+const NAV_LINKS = ["Home", "Destinations", "Packages", "Gallery", "About", "Contact"];
 
 interface NavbarProps {
   onBookNow: () => void;
