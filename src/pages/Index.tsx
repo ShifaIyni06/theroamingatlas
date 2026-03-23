@@ -77,6 +77,9 @@ const Index = () => {
         </div>
       </section>
 
+      <div className="section-padding">
+          <Gallery />
+      </div>
       <WhyChooseUs />
       <Testimonials />
       <Footer />
