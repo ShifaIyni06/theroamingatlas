@@ -34,7 +34,7 @@ const Navbar = ({ onBookNow }: NavbarProps) => {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3 group">
   <img
-    src="/logo.png"
+    src="/LOGO.png"
     alt="Roaming Atlas Logo"
     className="w-9 h-9 object-contain transition-transform duration-300 group-hover:scale-110"
   />
