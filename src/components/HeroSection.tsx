@@ -43,8 +43,8 @@ const HeroSection = ({ onExplore }: HeroSectionProps) => (
         <button onClick={onExplore} className="btn-primary text-lg">
           Explore Packages
         </button>
-        <a href="#about" className="btn-glass text-lg">
-          Start Your Journey
+        <a href="#gallery" className="btn-glass text-lg">
+          View Gallery
         </a>
       </motion.div>
     </div>
