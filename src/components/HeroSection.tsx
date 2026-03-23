@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
+import Gallery from "@/components/Gallery";
 
 interface HeroSectionProps {
   onExplore: () => void;
