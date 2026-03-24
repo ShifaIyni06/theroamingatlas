@@ -36,18 +36,33 @@ const HeroSection = ({ onExplore }: HeroSectionProps) => (
         Explore India Like <br /> Never Before
       </motion.h1>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4, ease: [0.2, 0, 0, 1] }}
-        className="flex flex-col sm:flex-row gap-4 justify-center"
-      >
-        <button onClick={onExplore} className="btn-primary text-lg">
-          Explore Packages
-        </button>
-        <a href="#gallery" className="btn-glass text-lg">
-          View Gallery
-        </a>
-      </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.4, ease: [0.2, 0, 0, 1] }}
+  className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+>
+  {/* Primary */}
+  <button onClick={onExplore} className="btn-primary text-lg px-6">
+    Explore Packages
+  </button>
+
+  {/* Secondary */}
+  <a
+    href="https://wa.me/917093899504?text=Hi%20I%20am%20interested%20in%20your%20travel%20packages"
+    target="_blank"
+    className="btn-glass text-lg px-6 border border-green-400/30 hover:bg-green-500/10"
+  >
+    💬 Chat With Us
+  </a>
+
+  {/* Tertiary */}
+  <a
+    href="#gallery"
+    className="text-sm text-muted-foreground hover:text-foreground transition"
+  >
+    View Gallery →
+  </a>
+</motion.div>
     </div>
   </section>
 );
