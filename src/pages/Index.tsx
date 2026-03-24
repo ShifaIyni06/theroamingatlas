@@ -33,7 +33,7 @@ const Index = () => {
 
   return (
     <div className="bg-background min-h-screen text-foreground">
-      <Navbar onBookNow={() => openBooking()} />
+      <Navbar/>
       <HeroSection onExplore={scrollToPackages} />
 
       {/* Featured Destinations */}
