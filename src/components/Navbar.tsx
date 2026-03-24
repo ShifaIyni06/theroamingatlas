@@ -4,11 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = ["Home", "Destinations", "Packages", "Gallery", "About", "Contact"];
 
-interface NavbarProps {
-  onBookNow: () => void;
-}
+interface NavbarProps {}
 
-const Navbar = ({ onBookNow }: NavbarProps) => {
+const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [active, setActive] = useState("home");
   const [isLight, setIsLight] = useState(() => {
@@ -115,12 +113,14 @@ const Navbar = ({ onBookNow }: NavbarProps) => {
             {isLight ? <Moon size={18} /> : <Sun size={18} />}
           </button>
 
-          <button
-            onClick={onBookNow}
-            className="px-5 py-2 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white text-sm font-medium shadow-md hover:scale-105 transition"
-          >
-            Book Now
-          </button>
+         <a
+  href="https://wa.me/917093899504?text=Hi%20I%20am%20interested%20in%20your%20travel%20packages"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-5 py-2 rounded-full border border-green-400/30 text-sm font-medium hover:bg-green-500/10 hover:scale-105 transition-all duration-300"
+>
+  💬 Chat to Book
+</a>
         </div>
 
         {/* 📱 Mobile */}
@@ -155,15 +155,15 @@ const Navbar = ({ onBookNow }: NavbarProps) => {
                 </button>
               ))}
 
-              <button
-                onClick={() => {
-                  onBookNow();
-                  setMobileOpen(false);
-                }}
-                className="mt-2 px-5 py-2 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white"
-              >
-                Book Now
-              </button>
+              <a
+  href="https://wa.me/917093899504?text=Hi%20I%20am%20interested%20in%20your%20travel%20packages"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => setMobileOpen(false)}
+  className="mt-2 px-5 py-2 rounded-full border border-green-400/30 text-center hover:bg-green-500/10 transition"
+>
+  💬 Chat to Book
+</a>
             </div>
           </motion.div>
         )}
