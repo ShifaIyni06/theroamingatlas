@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const NAV_LINKS = ["Home", "Destinations", "Packages", "Gallery", "About", "Contact"];
+const NAV_LINKS = ["Home","Packages", "Gallery", "About", "Contact"];
 
 interface NavbarProps {}
 
@@ -56,28 +56,29 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
         {/* 🌍 Logo + Tagline */}
-        <div className="flex flex-col">
-          <div
-            onClick={() => handleNavClick("home")}
-            className="flex items-center gap-3 cursor-pointer"
-          >
-            <img
-              src="/LOGO.png"
-              alt="logo"
-              className="w-12 h-12 object-contain drop-shadow-md"
-            />
-            <span className="text-lg md:text-xl font-semibold tracking-wide text-foreground">
-              THE ROAMING ATLAS
-            </span>
-          </div>
+<div className="flex flex-col leading-tight">
+  <div
+    onClick={() => handleNavClick("home")}
+    className="flex items-center gap-3 cursor-pointer"
+  >
+    <img
+      src="/LOGO.png"
+      alt="logo"
+      className="w-10 h-10 object-contain"
+    />
+    <span className="text-lg md:text-xl font-semibold tracking-wide text-foreground whitespace-nowrap">
+      THE ROAMING ATLAS
+    </span>
+  </div>
 
-          <span className="text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
-            Explore • Experience • Escape
-          </span>
-        </div>
+  {/* smaller + subtle tagline */}
+  <span className="text-[9px] tracking-[0.25em] text-muted-foreground uppercase ml-[52px]">
+    Explore • Experience • Escape
+  </span>
+</div>
 
         {/* 🖥️ Desktop Nav */}
-        <div className="hidden md:flex gap-8 text-sm font-medium">
+        <div className="hidden md:flex gap-6 text-sm font-medium">
           {NAV_LINKS.map((item) => {
             const id = item.toLowerCase();
             const isActive = active === id;
