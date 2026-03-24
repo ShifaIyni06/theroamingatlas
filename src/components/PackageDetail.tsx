@@ -178,14 +178,42 @@ const PackageDetail = ({ pkg, onClose, onBook }: PackageDetailProps) => (
           </div>
 
           {/* Book CTA */}
-          <div className="pt-2">
-            <button onClick={() => onBook(pkg)} className="btn-primary w-full text-lg py-4">
-              Book This Package — Starting 
-<span className="font-price text-lg font-semibold ml-1">
-  ₹{pkg.prices.train.toLocaleString("en-IN")}*
-</span>
-            </button>
-          </div>
+          {/* Contact CTA */}
+<div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+
+  {/* WhatsApp */}
+  <a
+    href={`https://wa.me/917093899504?text=${encodeURIComponent(
+      `Hi, I am interested in the "${pkg.title}" package. Please share more details.`
+    )}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn-glass text-center text-sm md:text-base py-3 rounded-xl border border-green-400/30 hover:bg-green-500/10 transition-all duration-300 hover:scale-105"
+  >
+    💬 WhatsApp
+  </a>
+
+  {/* Mail */}
+  <a
+    href={`mailto:theroamingatlas@gmail.com?subject=${encodeURIComponent(
+      `Inquiry for ${pkg.title} Package`
+    )}&body=${encodeURIComponent(
+      `Hi,\n\nI am interested in the "${pkg.title}" package. Please share details regarding pricing, availability, and booking process.\n\nThank you.`
+    )}`}
+    className="btn-glass text-center text-sm md:text-base py-3 rounded-xl border border-blue-400/30 hover:bg-blue-500/10 transition-all duration-300 hover:scale-105"
+  >
+    📧 Mail Us
+  </a>
+
+  {/* Call */}
+  <a
+    href="tel:+917093899504"
+    className="btn-glass text-center text-sm md:text-base py-3 rounded-xl border border-yellow-400/30 hover:bg-yellow-500/10 transition-all duration-300 hover:scale-105"
+  >
+    📞 Call Us
+  </a>
+
+</div>
         </div>
       </div>
     </motion.div>
